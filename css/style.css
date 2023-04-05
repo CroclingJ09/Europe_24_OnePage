@@ -1,0 +1,367 @@
+@charset "UTF-8";
+/* All */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: pacifico;
+  src: url(../font/Pacifico-Regular.ttf);
+}
+@font-face {
+  font-family: quicksand;
+  src: url(../font/Quicksand-VariableFont_wght.ttf);
+}
+/* Header */
+#video {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#text {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(35, 31, 32, 0.6);
+  font-family: pacifico;
+  color: white;
+  font-size: 1.6em;
+}
+
+#fleche {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  width: 6em;
+  height: 6em;
+}
+
+#fleche a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  background-image: url(../media/arrow.png);
+  background-size: 2em;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: solid 0.2em #f77d19;
+  border-radius: 100%;
+}
+
+#fleche a:hover {
+  background-color: #f77d19;
+  background-image: url(../media/arrow_hover.png);
+}
+
+/* Main */
+/* Présence du footer car même caractéristiques que les sections */
+section, footer {
+  padding-left: 5%;
+  padding-top: 5%;
+  border-top: solid 0.5em #f77d19;
+}
+
+#travel, #explore {
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+  background-position: 0 15em;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#travel {
+  background-color: #2f3133;
+  background-image: url(../media/paralaxes/paralaxe1.png);
+}
+
+#explore {
+  background-color: #2f3133;
+  background-image: url(../media/paralaxes/paralaxe3.png);
+}
+
+#countries {
+  background-color: #2f3133;
+  padding-bottom: 6em;
+  background-image: url(../media/paralaxes/paralaxe2.png);
+  background-position: bottom right;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#nav-letter {
+  width: 90%;
+}
+
+#nav-letter a {
+  text-decoration: none;
+  color: white;
+}
+
+#nav-letter a:hover {
+  color: #f77d19;
+  font-size: 1.2em;
+}
+
+/* Présence du footer car même caractéristiques que les sections */
+section h2, footer h2 {
+  font-family: pacifico;
+  font-size: 2.2rem;
+  color: #f77d19;
+  width: 100%;
+}
+
+/* Présence du footer car même caractéristiques que les sections */
+section h3, footer h3 {
+  width: 100%;
+  font-family: quicksand;
+  font-size: 1.5rem;
+  color: #f77d19;
+}
+
+section > h3 {
+  font-size: 1.7rem;
+  margin-bottom: 1em;
+}
+
+section > p, footer > p {
+  width: 60%;
+  font-family: quicksand;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 2em;
+}
+
+section strong {
+  color: #f77d19;
+  font-weight: bolder;
+}
+
+/* section p, footer p{
+    margin-top: 1em;
+    margin-bottom: 2em;
+    width: 60%;
+} */
+article {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 4em;
+}
+
+.img {
+  width: 13em;
+  height: 12em;
+  background-color: aqua;
+  overflow: hidden;
+  border-radius: 1em 0 1em 1em;
+  border: solid 0.2em #f77d19;
+}
+
+.text {
+  width: 50%;
+  height: 12em;
+  /*     background-color: white; */
+  overflow: hidden;
+}
+
+.landscape {
+  height: 100%;
+  position: relative;
+  left: -30%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.flag {
+  height: 30%;
+  position: relative;
+  left: 0;
+  top: -30%;
+  border-radius: 0 0.5em 0 0;
+  border: solid #f77d19;
+  border-width: 0.2em 0.2em 0 0;
+}
+
+.text h3 {
+  padding: 5%;
+  height: 25%;
+  display: flex;
+  align-items: center;
+  color: #f77d19;
+  background-color: white;
+  border-radius: 0 1em 1em 0;
+  border: solid 0.1em #f77d19;
+  border-left: none;
+}
+
+.text p {
+  padding-top: 5%;
+  padding-inline: 5%;
+  height: 75%;
+  font-family: quicksand;
+  color: white;
+  font-size: 0.9em;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  background-color: #2f3133;
+}
+
+footer h3 {
+  margin-bottom: 1.5em;
+  margin-top: 1em;
+}
+
+form {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+form input, form textarea {
+  font-family: quicksand;
+  border: solid 0.2em #f77d19;
+  border-radius: 2em;
+  width: 100%;
+}
+form input {
+  height: 3em;
+}
+form textarea {
+  padding-top: 2%;
+  resize: vertical;
+}
+form #name, form #email, form textarea {
+  padding-left: 5%;
+}
+form #send {
+  background-color: #f77d19;
+  color: white;
+  font-weight: bold;
+  width: 70%;
+}
+form #send:hover {
+  background-color: white;
+  color: #f77d19;
+}
+
+#adress p {
+  font-family: quicksand;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+#adress a {
+  text-decoration: none;
+  color: #f77d19;
+  font-weight: bold;
+}
+
+#adress a:hover {
+  font-size: 1.3rem;
+}
+
+iframe {
+  margin-top: 4em;
+  width: 95%;
+  height: 20em;
+}
+
+#end {
+  margin-top: 2em;
+  width: 100%;
+  height: 3em;
+  color: #f77d19;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: quicksand;
+}
+
+/* Passage à la version tablette */
+@media screen and (min-width: 1000px) {
+  /* All */
+  body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  /* Header */
+  header {
+    width: 100%;
+  }
+  /* Main */
+  #travel {
+    background-color: #2f3133;
+    border-right: solid 0.1em #f77d19;
+  }
+  #explore {
+    border-left: solid 0.1em #f77d19;
+  }
+  #travel, #explore {
+    width: 50%;
+  }
+  #countries {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 15em;
+  }
+  article {
+    width: 45%;
+  }
+  .img {
+    width: 45%;
+  }
+  .flag {
+    height: 30%;
+    top: -30%;
+  }
+  /* Footer */
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  footer h2, footer > p {
+    width: 100%;
+  }
+  #form, #adress {
+    width: 50%;
+  }
+  #form form {
+    width: 80%;
+  }
+}
+/* Passage à la version desktop */
+@media screen and (min-width: 1340px) {
+  /* Main */
+  #travel, #explore {
+    background-position: 0 12em;
+  }
+  article {
+    width: 30%;
+  }
+  #countries {
+    padding-bottom: 30em;
+  }
+}/*# sourceMappingURL=style.css.map */
